@@ -1,0 +1,182 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap');
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 2fr;
+    grid-template-areas: "hd" "main";
+    background-color: #fafafa;
+    min-height: 100vh;
+    font-family: "poppins", sans-serif;
+    font-size: 16px;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    grid-area: hd;
+    justify-content: center;
+    align-items: center;
+    padding-top: 6em;
+}
+
+main {
+    grid-area: main;
+    display: flex;
+    gap: 2em;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+img {
+    height: 64px;
+    width: 64px;
+}
+
+main>div {
+    display: flex;
+    flex-direction: column;
+    padding: 2em;
+    width: 425px;
+    height: 300px;
+    background-color: #fff;
+}
+
+main>div h2 {
+    color: hsl(234, 12%, 34%);
+}
+
+main>div p {
+    font-size: 0.9em;
+    margin-top: 1em;
+    color: hsl(229, 6%, 66%);
+    line-height: 2em;
+    width: 350px;
+}
+
+main>div img {
+    align-self: flex-end;
+    margin-top: 3em;
+}
+
+.light {
+    font-size: 2.5em;
+    color: hsl(234, 12%, 34%);
+    font-weight: 200;
+}
+
+.bold {
+    font-size: 2.5em;
+    color: hsl(234, 12%, 34%);
+    font-weight: 600;
+}
+
+.h-desc {
+    color: hsl(229, 6%, 66%);
+    margin-top: 1em;
+    width: 550px;
+    text-align: center;
+    font-weight: 400;
+}
+
+.col {
+    background-color: #fafafa;
+    border-radius: 6px;
+    height: 704px;
+    gap: 2.5em;
+    width: 514px;
+}
+
+.col>div {
+    display: flex;
+    flex-direction: column;
+    padding: 2em;
+}
+
+.col>div p {
+    width: 300px;
+}
+
+.supervisor {
+    align-self: center;
+    border-top: 4px solid hsl(180, 62%, 55%);
+    border-radius: 8px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.supervisor p {
+    width: 300px;
+}
+
+.team {
+    background-color: #fff;
+    height: 50%;
+    border-top: 4px solid hsl(0, 78%, 62%);
+    border-radius: 6px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.karma {
+    background-color: #fff;
+    height: 50%;
+    border-top: 4px solid hsl(34, 97%, 64%);
+    border-radius: 6px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.calculator {
+    align-self: center;
+    border-top: 4px solid hsl(212, 86%, 64%);
+    border-radius: 6px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+@media only screen and (max-width: 375px) {
+    body {
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: 50% 50%;
+        grid-template-areas: "header" "main";
+        font-size: 11px;
+    }
+    header {
+        grid-area: header;
+        text-align: center;
+    }
+    main {
+        margin-top: 3em;
+        grid-area: main;
+        display: flex;
+        flex-direction: column;
+        gap: 2em
+    }
+    main>div {
+        width: 320px;
+        height: 250px;
+    }
+    main>div p {
+        font-size: 1.2em;
+    }
+    main>div img {
+        margin-top: 5em;
+    }
+    .h-desc {
+        width: 334px;
+        font-size: 1.5em;
+    }
+    .col {
+        height: 600px;
+    }
+    .col>div {
+        height: 250px;
+        width: 320px;
+    }
+    .karma {
+        margin-top: 2em;
+    }
+}
